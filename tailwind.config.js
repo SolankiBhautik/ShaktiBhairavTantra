@@ -1,5 +1,5 @@
 /** @type {import('tailwindcss').Config} */
-export default config = {
+export default {
   darkMode: ["class"],
   content: [
     './pages/**/*.{js,jsx}',
@@ -17,15 +17,17 @@ export default config = {
     },
     extend: {
       colors: {
+        primary: "#FF9800", // Saffron
+        accent: "#512DA8",  // Violet
+        neutral: {
+          ivory: "#fff5e6",
+          warm: "#f5f5f5",
+        },
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
-        primary: {
-          DEFAULT: "#FF9800", // Saffron
-          foreground: "hsl(var(--primary-foreground))",
-        },
         secondary: {
           DEFAULT: "#512DA8", // Violet
           foreground: "hsl(var(--secondary-foreground))",
@@ -37,10 +39,6 @@ export default config = {
         muted: {
           DEFAULT: "hsl(var(--muted))",
           foreground: "hsl(var(--muted-foreground))",
-        },
-        accent: {
-          DEFAULT: "hsl(var(--accent))",
-          foreground: "hsl(var(--accent-foreground))",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
@@ -57,17 +55,17 @@ export default config = {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        sans: ['Lora', 'serif'],
-        display: ['Playfair Display', 'serif'],
+        display: ["Playfair Display", "serif"],
+        body: ["Lora", "serif"],
       },
       keyframes: {
         "accordion-down": {
-          from: { height: 0 },
+          from: { height: "0" },
           to: { height: "var(--radix-accordion-content-height)" },
         },
         "accordion-up": {
           from: { height: "var(--radix-accordion-content-height)" },
-          to: { height: 0 },
+          to: { height: "0" },
         },
       },
       animation: {
